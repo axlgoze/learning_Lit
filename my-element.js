@@ -1,40 +1,29 @@
-// DECLARATIVE EVENT LISTENERS
+// MORE EXPRESSIONS
 
 import {LitElement, html} from 'lit';
 
-export class MyElement extends LitElement{
-    
-    
-    static properties = {
-        name : {},
-    };
-    
-    constructor(){
-        super();
-        this.name = 'Axel Reyes';
-    }
+export class MoreExpressions extends LitElement {
+  static properties = {
+    checked: {},
+  };
 
-    
-    render(){
-        return html`
-        <p>Hey ${this.name}</p>
-        
-        // declarative event listener.
-        <input @input=${this.changeName} placeholder="Enter your name">
+  constructor() {
+    super();
+    this.checked = false;
+  }
 
-        // event handlers To add interactivity to your components
-        <button  @click=${this.handleClick} >Click me!</button>
-        
-        `;
-    }
+  render() {
+    return html`
+      <div>
+         <!-- The ?attributeName syntax tells Lit you want to set or remove a boolean attribute based on the value of the expression. -->
+         <input ?disabled=${!this.checked} type="text" value="Hello there.">
+      </div>
+      <label><input type="checkbox" @change=${this.setChecked}> Enable editing</label>
+    `;
+  }
 
-    // event handler method.
-    changeName(event) {
-        const input = event.target;
-        this.name = input.value;
-      }
-
+  setChecked(event) {
+    this.checked = event.target.checked;
+  }
 }
-
-
-customElements.define('my-element', MyElement);
+customElements.define('more-expressions', MoreExpressions);
