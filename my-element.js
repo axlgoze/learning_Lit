@@ -1,19 +1,25 @@
-// TEMPLATE LOGIC
+// STYLES
 
-import {LitElement, html} from 'lit';
+import {LitElement, html, css} from 'lit';
 
 export class ToDoList extends LitElement {
   static properties = {
     _listItems: {state: true},
   };
 
+  // TODO: Add styles here
+  static styles = css`
+    .completed {
+    text-decoration-line: line-through;
+    color: #777;
+    }
+    `;
+
   constructor() {
     super();
-    // asignando un array de objetos
     this._listItems = [
-    // dos objetos con propiedades
-      {text: 'Start Lit tutorial', completed: true},
-      {text: 'Make to-do list', completed: false},
+      {text: 'Make to-do list', completed: true},
+      {text: 'Add some styles', completed: false},
     ];
   }
 
@@ -21,32 +27,35 @@ export class ToDoList extends LitElement {
     return html`
       <h2>To Do</h2>
       <ul>
-         <!-- TODO: Render list items. -->
-        // aplica funcion map()
-        ${this._listItems.map((item) =>
-            html`<li>${item.text}</li>`
+        ${this._listItems.map(
+          (item) => html`
+            <li
+                // class="TODO"
+                // asigna estilos a los items
+                class=${item.completed ? 'completed' : ''}
+                @click=${() => this.toggleCompleted(item)}>
+              ${item.text}
+            </li>`
         )}
       </ul>
-        
       <input id="newitem" aria-label="New item">
       <button @click=${this.addToDo}>Add</button>
     `;
   }
-  
-  //click handler
-  get input() {
-    return this.renderRoot?.querySelector('#newitem') ?? null;
-    }
 
-  // TODO: Add click handler.
-  addToDo() {
-    // operador de propagacion para crear un nuevo array. Esto es una forma de hacer una copia del array original antes de modificarlo.
-    this._listItems = [...this._listItems,
-        {text: this.input.value, completed: false}];
-      this.input.value = '';
+  toggleCompleted(item) {
+    item.completed = !item.completed;
+    this.requestUpdate();
   }
 
-  //   Mutating objects and arrays.
+  get input() {
+    return this.renderRoot?.querySelector('#newitem') ?? null;
+  }
 
+  addToDo() {
+    this._listItems = [...this._listItems,
+        {text: this.input.value, completed: false}];
+    this.input.value = '';
+  }
 }
 customElements.define('todo-list', ToDoList);
