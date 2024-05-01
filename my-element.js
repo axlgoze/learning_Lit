@@ -4,21 +4,23 @@
 import {LitElement, html} from 'lit';
 // Aquí se define el comportamiento y la estructura del componente MyElement. 
 export class MyElement extends LitElement{
+    
+    // properties of the component
     static properties = {
-        version : {},
+        message : {},
     };
-
+    // reactive propertie
     constructor(){
         super();
-        this.version = 'World';
+        this.message = 'hello again';
     }
 
     // render is mandatory
     // define el contenido HTML que será renderizado por el componente. 
     render(){
         return html`
-        <p>Hello</p>
-        <p>My ${this.version}.</p>
+        <p>Hey</p>
+        <p>${this.message}.</p>
         `;
     }
 }
