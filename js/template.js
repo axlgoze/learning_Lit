@@ -1,6 +1,7 @@
 import {LitElement, html} from 'lit-element'
 
-
+// expressions in static files
+const mainColor= css`red`;
 
 class MyFirstElement extends LitElement {
 
@@ -9,12 +10,12 @@ class MyFirstElement extends LitElement {
         // style property can be single or an Array
         // also you can link external stylesheets
         return css`
-            div {color: red;}
+            div {color: ${mainColor}}
         `;
     }
 
     render(){
-        return html `<div>I'm Styled !</<p>`
+        return html `<div>something!</<p>`
     }
 }
 customElements.define('MyFirstElement' , MyFirstElement);
