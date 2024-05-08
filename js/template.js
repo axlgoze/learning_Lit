@@ -1,16 +1,20 @@
-// define and render a template
-
 import {LitElement, html} from 'lit-element'
 
-// define a class that extends LitElement
+
+
 class MyFirstElement extends LitElement {
-    // add a render function 
+
+    // define scoped styles in a static styles property
+    static get styles(){
+        // style property can be single or an Array
+        // also you can link external stylesheets
+        return css`
+            div {color: red;}
+        `;
+    }
+
     render(){
-        // Write your template in HTML inside a JavaScript template literal by enclosing the raw HTML in back-ticks
-        // tag your template literal with the html tag function to create a result
-        return html `<p>Template content</<p>`
-        // tipically returns a single templateResult object
+        return html `<div>I'm Styled !</<p>`
     }
 }
-// define your element
 customElements.define('MyFirstElement' , MyFirstElement);
