@@ -3,34 +3,44 @@ import {LitElement, html} from 'lit-element'
 
 class MyFirstElement extends LitElement {
 
-    //properties
+    
     static get properties(){
         return{
-            // propertyName : options
             greeting : {type: String},
             data: {type: false},
-            // An empty option object is equivalent to specifying the default value for all options.
             items: {}
         };
     }
 
-    // Initialize property values in the constructor
     constructor(){
-        // allways call super() first
         super();
-        // Initialize properties
-        this.greeting = 'Hello';
-        this.data = {name: 'Cora'};
-        this.items = [1,2,3];
+        // Add event listeners in the constructor
+        // if you need to listen an event that might occur before your component has been added to DOM
+        this.addEventListener('focus', this._handleFocus);
     }
 
     render(){
         return html `
-        <p>${this.greeting} ${this.data.name}.</p>
-        <p>You have ${this.items.length} items.</p>
+        <!-- declarative event listeners -->
+        <button @click=${this._handleClick} ></button>
         `;
     }
 }
 
 // * you should use '-' when defining your element
 customElements.define('My-FirstElement' , MyFirstElement);
+
+// add Event Listeners in connectedCallback
+
+// connectedCallback() {
+//     super.connectedCallback();
+//     window.addEventListener('resize', this._handleResize);
+//   }
+
+
+// add Event Listeners after first paint
+// async firstUpdated() {
+//     Give the browser a chance to paint
+//     await new Promise((r) => setTimeout(r, 0));
+//     this.addEventListener('click', this._handleClick);
+//   }
