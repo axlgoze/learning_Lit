@@ -1,21 +1,36 @@
 import {LitElement, html} from 'lit-element'
 
-// expressions in static files
-const mainColor= css`red`;
 
 class MyFirstElement extends LitElement {
 
-    // define scoped styles in a static styles property
-    static get styles(){
-        // style property can be single or an Array
-        // also you can link external stylesheets
-        return css`
-            div {color: ${mainColor}}
-        `;
+    //properties
+    static get properties(){
+        return{
+            // propertyName : options
+            greeting : {type: String},
+            data: {type: false},
+            // An empty option object is equivalent to specifying the default value for all options.
+            items: {}
+        };
+    }
+
+    // Initialize property values in the constructor
+    constructor(){
+        // allways call super() first
+        super();
+        // Initialize properties
+        this.greeting = 'Hello';
+        this.data = {name: 'Cora'};
+        this.items = [1,2,3];
     }
 
     render(){
-        return html `<div>something!</<p>`
+        return html `
+        <p>${this.greeting} ${this.data.name}.</p>
+        <p>You have ${this.items.length} items.</p>
+        `;
     }
 }
-customElements.define('MyFirstElement' , MyFirstElement);
+
+// * you should use '-' when defining your element
+customElements.define('My-FirstElement' , MyFirstElement);
