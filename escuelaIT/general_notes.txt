@@ -1,0 +1,2 @@
+to access to an element we can use:
+$0.myElement="something"

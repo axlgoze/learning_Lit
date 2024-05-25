@@ -2,14 +2,28 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
+  <title>Bienvenido a Lit element</title>
   <style>
     body {
-      background: #fafafa;
+      background: #2ede83;
+    }
+    #demo {
+      border: solid rgb(215, 157, 40) 2px;
+    }
+    
+    .div-title{
+      font-size: 33px;
+      font-weight: 800;
+      color: darkblue;
+      background-color: yellow;
+      padding-left: 400px;
     }
   </style>
 </head>
 <body>
-  <div id="demo"></div>
+  <div id="demo">
+    <p class="div-title">Welcome to LitElement</p>
+  </div>
 
   <script type="module">
     import { html, render } from 'lit';
@@ -18,7 +32,9 @@
     const header = 'Hello owc World!';
     render(
       html`
-        <lit-component .header=${header}>
+        <lit-component .header=${header}
+        who="Axl"
+        >
           some light-dom
         </lit-component>
       `,

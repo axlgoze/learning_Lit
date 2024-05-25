@@ -1,11 +1,11 @@
-# Learning lit
+# Learning litElement 🤠
 
 first 8 commits are from lit tutorial
 do it by yourself in:
 
 [Lit tutorial](https://lit.dev/tutorials/intro-to-lit/)
 
-## EscuelaIt course
+## EscuelaIt course 🌿
 
 install nodejs
 v12
@@ -14,7 +14,9 @@ install polymer-cli
 
 then install all necessary dependencies.
 
-## Starting project
+note: check general_notes file 👀
+
+## Starting project ➡️➡️
 npm init
 
 install lit-element
@@ -22,7 +24,7 @@ npm install lit-element
 
 these above commands adds node modules and more useful files to the project.
 
-## a better option
+## A better option 🟢
 
 You can use open web components
 
@@ -32,3 +34,5 @@ Quick Start
 
 npm init @open-wc
 
+# First example in EscuelaIT course:
+[Ejercicio01](./assets/evidences/evidence01.png)
