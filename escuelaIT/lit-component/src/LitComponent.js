@@ -8,6 +8,19 @@ export class LitComponent extends LitElement {
       padding-bottom: 25px;
       color: var(--lit-component-text-color, #000);
     }
+    .increment-btn {
+      background-color: blue;
+      color: white;
+      width: 90px;
+      border: none;
+    }
+    
+    .increment-btn:hover {
+      background-color: transparent;
+      border: 2px solid blue;
+      cursor:pointer;
+      color: blue;
+    }
   `;
 
   static properties = {
@@ -16,10 +29,12 @@ export class LitComponent extends LitElement {
     who: { type: String }
   };
 
+  // constructor initialize properties
   constructor() {
+    // always call super
     super();
     this.header = 'Hey there';
-    this.counter = 5;
+    this.counter = 0;
   }
 
   __increment() {
@@ -28,9 +43,9 @@ export class LitComponent extends LitElement {
 
   render() {
     return html`
-      <h2>${this.header} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
-      <h4>Hello <b>${this.who}</b> </h4>
+      <h2>${this.header} Clicks--> ${this.counter}!</h2>
+      <button class="increment-btn" @click=${this.__increment}>increment</button>
+      
     `;
   }
 }

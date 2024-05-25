@@ -7,21 +7,26 @@ do it by yourself in:
 
 ## EscuelaIt course 🌿
 
-install nodejs
-v12
+install nodejs v12
 
+```
 install polymer-cli
+```
 
 then install all necessary dependencies.
 
-note: check general_notes file 👀
+note: check general_notes file 
+[notes](./escuelaIT/general_notes.txt) 👀
 
 ## Starting project ➡️➡️
+```
 npm init
+```
 
 install lit-element
+```
 npm install lit-element
-
+```
 these above commands adds node modules and more useful files to the project.
 
 ## A better option 🟢
@@ -31,8 +36,9 @@ You can use open web components
 [Open web components](https://open-wc.org/guides/)
 
 Quick Start
-
+```
 npm init @open-wc
+```
 
 # First example in EscuelaIT course:
-[Ejercicio01](./assets/evidences/evidence01.png)
+![](./assets/evidences/evidence01.png)

@@ -1,2 +1,22 @@
 to access to an element we can use:
 $0.myElement="something"
+
+- properties are initialized in the Constructor
+
+## lit element component basic structure:
+
+import { LitElement, html } from 'lit-element';
+
+export class Component extends LitElement {
+
+    static styles = css`
+    :host {
+        display: block;
+    }
+    `;
+
+    render() {
+        return html``;
+    }
+}
+customElements.define('Litcounter', LItcounter);
