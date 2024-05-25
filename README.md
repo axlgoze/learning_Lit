@@ -42,3 +42,12 @@ npm init @open-wc
 
 # First example in EscuelaIT course:
 ![](./assets/evidences/evidence01.png)
+
+
+### WEB DEV SERVER CONFIGURATION:
+
+[web dev server guide](./curso-lit/readme.md)
+
+
+#NEXT STEPS
+  - create another branch and separate courses

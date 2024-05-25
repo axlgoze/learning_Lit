@@ -1,4 +1,4 @@
-#configuration without open web components
+#Configuration without open web components
 install node
 install npm
 
