@@ -1,13 +1,16 @@
-#Configuration without open web components
-install node
-install npm
+#  Web Dev Server
 
-## start project
+## starting a project
+
+```
 npm init -y
+```
 
-## Environment
+### Install Web Dev Server
+
+
+#### Environment
 install a web environment
-- web dev server
 [Web Dev Server](https://modern-web.dev/docs/dev-server/overview/)
 
 ```
@@ -24,4 +27,9 @@ add to scripts
 
 ```
 npm install lit
+```
+
+# Let's Go
+```
+npm run start
 ```

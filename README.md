@@ -1,53 +1,67 @@
 # Learning litElement 🤠
-
-first 8 commits are from lit tutorial
+First 8 commits are from lit tutorial
 do it by yourself in:
-
 [Lit tutorial](https://lit.dev/tutorials/intro-to-lit/)
 
-## EscuelaIt course 🌿
+# Starting
+1. [Web Dev Server](./escuelaIT/lit-component/README.md)
+2. [Open Web Components](./curso-lit/readme.md)
 
-install nodejs v12
+## 1) [Web Dev Server](https://modern-web.dev/docs/dev-server/overview/) 🌿
+
+### ➡️
+## starting a project
 
 ```
-install polymer-cli
+npm init -y
 ```
 
-then install all necessary dependencies.
+### Install Web Dev Server
 
-note: check general_notes file 
-[notes](./escuelaIT/general_notes.txt) 👀
 
-## Starting project ➡️➡️
+#### Environment
+install a web environment
+
+
 ```
-npm init
+npm i --save-dev @web/dev-server
 ```
 
-install lit-element
+add to scripts
+
 ```
-npm install lit-element
+"start": "web-dev-server --node-resolve --open --watch"
 ```
-these above commands adds node modules and more useful files to the project.
 
-## A better option 🟢
+### Install Lit
 
-You can use open web components
+```
+npm install lit
+```
 
-[Open web components](https://open-wc.org/guides/)
+# Let's Go
+```
+npm run start
+```
 
+## 2) [Web Open Components](https://open-wc.org/) 🌿
+### ➡️ 
 Quick Start
 ```
 npm init @open-wc
 ```
 
-# First example in EscuelaIT course:
+#  Excersices:
 ![](./assets/evidences/evidence01.png)
 
+✅
+- hello world 
+- counter
 
-### WEB DEV SERVER CONFIGURATION:
 
-[web dev server guide](./curso-lit/readme.md)
+🤓 [Learning Notes](./escuelaIT/general_notes.txt) 👀
 
 
-#NEXT STEPS
-  - create another branch and separate courses
+### NEXT STEPS
+  - Create another branch and separate courses
+  - 
