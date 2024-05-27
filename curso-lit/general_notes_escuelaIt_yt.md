@@ -38,3 +38,10 @@ EVENTS
 
 STYLES
 living in html literal template
+
+BOOLEAN
+when you initialize a boolean property you only need to put the name's property
+<feedback-element
+        msg="Pikachu"
+        
+></feedback-element>
