@@ -2,13 +2,6 @@ import { LitElement, html, css } from 'lit';
 
 // base class
 export class EitCounter extends LitElement {
-    static styles = [
-        css`
-            :host {
-                display: block;
-            }
-        `
-    ];
 
     // Old version to call properties
     // static get properties() {
@@ -24,7 +17,7 @@ export class EitCounter extends LitElement {
         counter: {type: Number}
     }
 
-    
+
     constructor() {
         super();
         // this.header="This is the counter header";
@@ -37,13 +30,24 @@ export class EitCounter extends LitElement {
     _count(){
         this.counter +=1
     }
+    _MinusCount(){
+        this.counter -=1
+    }
+
 
     render() {
         return html`
+        <style>
+            h1{
+                color:red;
+            }
+        </style>
+        
         <h1>Counter Component</h1>
         <h2>${this.header}</h2>
         <h3>Counter value = ${this.counter}</h3>
-        <button @click=${this._count}>count</button>
+        <button @click=${this._count}>+1</button>
+        <button @click=${this._MinusCount}>-1</button>
         <slot name=""></slot>
         `;
     }

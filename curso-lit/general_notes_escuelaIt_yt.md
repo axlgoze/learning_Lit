@@ -30,4 +30,11 @@ we can modify values outside:in de index file.
 
 constructor initialize properties
 
+the imports on index.js must have extension
 
+EVENTS
+@eventHandler="$(js code)"
+@eventHandler="$(this.eventName"
+
+STYLES
+living in html literal template
