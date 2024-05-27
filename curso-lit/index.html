@@ -7,7 +7,25 @@
 </head>
 <body>
     <h1>Lit.dev</h1>
-    <eit-counter></eit-counter>
-    <script type="module" src="./components/eit-counter.js"></script>
+
+    <hello-world></hello-world>
+    
+
+    <eit-counter
+        header="Index Header"
+    ></eit-counter>
+    <hr>
+    <small>instances</small>
+    <eit-counter
+        counter="100"
+    ></eit-counter>
+    <br>
+    <eit-counter
+        counter="12"
+    >
+        <p>Contador12 !!!</p>
+    </eit-counter>
+
+    <script type="module" src="./src/index.js"></script>
 </body>
 </html>

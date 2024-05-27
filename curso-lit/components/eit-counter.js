@@ -24,9 +24,10 @@ export class EitCounter extends LitElement {
         counter: {type: Number}
     }
 
+    
     constructor() {
         super();
-        this.header="This is the counter header";
+        // this.header="This is the counter header";
         this.counter=0;
     
     }
@@ -39,10 +40,11 @@ export class EitCounter extends LitElement {
 
     render() {
         return html`
-        <h1>Counter component</h1>
+        <h1>Counter Component</h1>
         <h2>${this.header}</h2>
         <h3>Counter value = ${this.counter}</h3>
         <button @click=${this._count}>count</button>
+        <slot name=""></slot>
         `;
     }
 }

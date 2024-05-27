@@ -44,7 +44,7 @@ npm install lit
 npm run start
 ```
 
-## 2) [Web Open Components](https://open-wc.org/) 🌿
+## 2) [Open Web Components](https://open-wc.org/) 🌿
 ### ➡️ 
 Quick Start
 ```
