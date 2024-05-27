@@ -27,11 +27,21 @@ export class EitCounter extends LitElement {
 
     // methods
 
+
     _count(){
         this.counter +=1
+        if(this.counter==5){
+            this.shadowRoot.getElementById("feedback")._open("5 clicks!")
+        }
+        if(this.counter == 11){
+            this.shadowRoot.getElementById("feedback")._open("Magic Number")
+        }
     }
     _MinusCount(){
         this.counter -=1
+        if(this.counter == 0){
+            this.shadowRoot.getElementById("feedback")._open("Reset!")
+        }
     }
 
 
@@ -49,6 +59,8 @@ export class EitCounter extends LitElement {
         <button @click=${this._count}>+1</button>
         <button @click=${this._MinusCount}>-1</button>
         <slot name=""></slot>
+
+        <feedback-element id="feedback"></feedback-element>
         `;
     }
 }
