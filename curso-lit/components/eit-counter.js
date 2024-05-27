@@ -27,14 +27,17 @@ export class EitCounter extends LitElement {
 
     // methods
 
+    get feedback(){
+        return this.shadowRoot.getElementById("feedback")
+    }
 
     _count(){
         this.counter +=1
         if(this.counter==5){
-            this.shadowRoot.getElementById("feedback")._open("5 clicks!")
+            this.feedback._open("5 clicks!")
         }
         if(this.counter == 11){
-            this.shadowRoot.getElementById("feedback")._open("Magic Number")
+            this.feedback._open("Magic Number")
         }
     }
     _MinusCount(){
