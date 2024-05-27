@@ -45,3 +45,11 @@ when you initialize a boolean property you only need to put the name's property
         msg="Pikachu"
         
 ></feedback-element>
+
+SHADOWROOT
+To access to the elements inside a component use shadowRoot:
+
+this.shadowRoot.getElementById("feedback")._open("5 clicks!")
+
+shadowRoot is the root of the component and is useful to access to the elements inside the template
+

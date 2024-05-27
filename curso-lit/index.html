@@ -8,7 +8,7 @@
 <body>
     <h1>Lit.dev</h1>
     
-    <hello-world></hello-world>
+    <hello-world></hello-world> 
     
 
     <eit-counter
@@ -31,6 +31,16 @@
         msg="Pikachu"
     ></feedback-element> -->
 
+    <multi-checkbox separator="," value="">
+        <ul slot="check-values">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </multi-checkbox>
+
     <script type="module" src="./src/index.js"></script>
+    <script type="module" src="https://www.unpkg.com/multi-checkbox/multi-checkbox.js"></script>
+    
 </body>
 </html>
