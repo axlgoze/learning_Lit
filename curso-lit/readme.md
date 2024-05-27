@@ -33,3 +33,16 @@ npm install lit
 ```
 npm run start
 ```
+
+
+# Installing web pack
+```
+npm install -D webpack webpack-cli
+```
+add to scripts:
+```
+"build": "webpack --mode production"
+```
+```
+npm run build
+```
