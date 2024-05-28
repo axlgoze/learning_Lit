@@ -52,7 +52,6 @@
     <h4>2) Attribute Binding</h4>
     <eit-input
         placeholder="write something"
-        
     ></eit-input>
     <h4>3) Boolean Attribute Binding</h4>
     <eit-input
@@ -60,7 +59,15 @@
         disabled
     ></eit-input>
     <hr>
-    
+    <h4>4) Event Binding</h4>
+    <eit-input
+        placeholder='@keypress="${this._lookForKey}'
+    ></eit-input>
+    <hr>
+    <h4>4) Binding to a property</h4>
+    <eit-input
+        value="111"
+    ></eit-input>
     <script type="module" src="./src/index.js"></script>
     <script type="module" src="https://www.unpkg.com/multi-checkbox/multi-checkbox.js"></script>
 </body>
