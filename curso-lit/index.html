@@ -42,13 +42,26 @@
     </multi-checkbox>
 
     <hr>
-
-    <h4>Time Stand to date</h4>
+    <h3>BINDING</h3>
+    <h4>1) Text binding</h4>
+    <h5 style="text-indent:15px;">Time Stand to date</h5>
     <timestamp-to-date
         timestamp="1653676800000"
     ></timestamp-to-date>
+    <hr>
+    <h4>2) Attribute Binding</h4>
+    <eit-input
+        placeholder="write something"
+        
+    ></eit-input>
+    <h4>3) Boolean Attribute Binding</h4>
+    <eit-input
+        placeholder="disabled"
+        disabled
+    ></eit-input>
+    <hr>
+    
     <script type="module" src="./src/index.js"></script>
     <script type="module" src="https://www.unpkg.com/multi-checkbox/multi-checkbox.js"></script>
-    
 </body>
 </html>
