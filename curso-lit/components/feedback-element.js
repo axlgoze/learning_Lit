@@ -16,7 +16,7 @@ export class FeedbackElement extends LitElement {
         this.msg = message;
         this.opened = true;
 
-        setTimeout(()=> this.opened = false, 2000)
+        setTimeout(()=> this.opened = false, 2000);
     }
 
     render() {

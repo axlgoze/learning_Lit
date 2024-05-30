@@ -13,11 +13,12 @@ export class EitCounter extends LitElement {
 
     // New version to call properties
     static properties={
+        // declaration
         header: { type: String },
         counter: {type: Number}
     }
 
-
+    // initialize
     constructor() {
         super();
         // this.header="This is the counter header";
