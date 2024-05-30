@@ -63,7 +63,7 @@ export class ComponenteTitulo extends LitElement {
             header4: { type: String },
             header5: { type: String },
             header6: { type: String },
-            currentView: {type: String}
+            title: {type: String}
         };
     }
 
@@ -75,7 +75,7 @@ export class ComponenteTitulo extends LitElement {
         this.header3 = 'Contactos guardados';
         this.header4 = 'Recargar';
         this.header5 = 'Modificar contacto';
-        this.currentView = 'Recargas y paquetes';
+        this.title = '';
     }
 
 
@@ -91,7 +91,7 @@ export class ComponenteTitulo extends LitElement {
             <div class="header header--flex">
                 <!-- __title--inicio
                 --inicio -->
-                <span class="header__title header__title--inicio">${this.header1}</span>
+                <span class="header__title header__title--inicio">${this.title}</span>
                 <div class="${this.currentView === "Recargas y paquetes" ? "hidden":"header__button" }">
                     <span class="header__icon"></span>
                 </div>

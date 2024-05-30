@@ -10,15 +10,19 @@ export class EitInput extends LitElement {
             input{
                 width: 210px;
             }
+            label{
+                color: green;
+            }
         `;
     }
 
     static properties = {
         
-            label: {type: String},
+            
             placeholder: {type: String},
             disabled: {type: Boolean},
             value: {type: String},
+            label: {type: String}
         
     }
 
@@ -27,6 +31,7 @@ export class EitInput extends LitElement {
             // initializing
             this.disabled=false;
             this.value="";
+            this.placeholder='';
     
     }
 
@@ -41,12 +46,16 @@ export class EitInput extends LitElement {
 
     render() {
         return html`
-            <input type="text"
-                placeholder="${this.placeholder}" 
-                ?disabled=${this.disabled}
-                @keypress="${this._lookForKey}"
-                .value="${this.value}"
-                >
+            <div>
+            ${this.label ? html`<label for="textField">${this.label}:</label>` : ''}
+                <input type="text"
+                    id="textField"
+                    placeholder="${this.placeholder}" 
+                    ?disabled=${this.disabled}
+                    @keypress="${this._lookForKey}"
+                    .value="${this.value}"
+                    >
+            </div>
             `;
     }
 }
