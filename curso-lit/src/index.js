@@ -8,4 +8,4 @@ import '../components/eit-input.js'
 import '../components/componente-titulo.js'
 import '../components/componente-plantilla.js'
 import '../components/componente-agregar-contacto.js'
-
+import '../components/tags-list.js'
