@@ -34,12 +34,16 @@ export class PaginationSimulator extends LitElement {
     toggle(){
         this.opened = !this.opened;
     }
+    showMsg(){
+        console.log("hi there!")
+    }
 
     render() {
         return html`
             <slot name="click" class="trigger" @click="${this.toggle}"></slot>
             
             <slot class="${this.opened ? '' : 'closed'}"></slot>
+
         `;
     }
 }

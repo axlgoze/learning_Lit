@@ -13,6 +13,17 @@ export class MenuOverlay extends LitElement {
             .closed{
                 display: none;
             }
+            .over{
+                position:absolute;
+                border: solid 1px green;
+                box-shadow: 3px 3px 8px #eee;
+                padding: 15px;
+                width: 150px;
+                background-color: #74E291;
+                color: #211C6A;
+                text-transform: uppercase;
+                list-style-type: none;
+            }
         `
     ];
     /**
@@ -55,7 +66,7 @@ export class MenuOverlay extends LitElement {
                 <slot name="trigger"></slot>
             </div>
 
-            <section class="${this.opened ? '' : 'closed'}">
+            <section class="${this.opened ? '' : 'closed'} over">
                 <slot></slot>
             </section>
         `;

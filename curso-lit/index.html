@@ -9,8 +9,15 @@
             background-color: rgb(5, 5, 39);
             color: white;
         }
-
-
+        .pointer{
+            cursor: pointer;
+        }
+        .listyled{
+            list-style-type: none;
+        }
+        .listyled::before{
+            content: "⭐";
+        }
     </style>
 </head>
 <body>
@@ -108,15 +115,18 @@
     <menu-overlay>
         <div slot="trigger">Menu</div>
         <!-- the content below (light DOM) is hide until trigger slot is triggered -->
-        <p>title</p>
-        <button>clic</button>   
+        <!-- <p>title</p>
+        <button>clic</button>    -->
+        <ul>
+            <li class="listyled">option1</li>
+            <li class="listyled">option2</li>
+            <li class="listyled">option3</li>
+        </ul>
     </menu-overlay>
 
 
-
-
-    <hr>
-    <h4>Pagination</h4>
+    
+    <!-- <h4>Pagination</h4>
     
     <hr>
     <pagination-simulator>
@@ -128,10 +138,12 @@
             <li>option3</li>
         </ul>
 
-    </pagination-simulator>
+    </pagination-simulator> -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aperiam minima, est, autem enim optio nemo ex voluptatem repellat dolorem quam eveniet harum labore dolorum necessitatibus commodi aut iure dolore?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo odio porro deserunt praesentium officiis reprehenderit! Rerum placeat autem excepturi doloremque optio corrupti fugiat! Fuga soluta beatae laboriosam eaque, corrupti laudantium!</p>
+    <p>Hic dolorum in saepe incidunt, sequi soluta et provident ullam tenetur animi aliquam blanditiis ab quia! Sit tempore, libero aut praesentium quibusdam atque? Voluptates quam quia officiis? Ex, nesciunt tempora.</p>   
 
-
-
+    <hr>
 
 
     <script type="module" src="./src/index.js"></script>
