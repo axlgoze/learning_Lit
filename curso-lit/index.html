@@ -6,7 +6,8 @@
     <title>Lit en Escuela IT</title>
     <style>
         body{
-            background-color: aliceblue;
+            background-color: rgb(5, 5, 39);
+            color: white;
         }
 
 
@@ -95,11 +96,40 @@
 
     <hr>
     <h4>Slots</h4>
-    <menu-overlay>
+    <slot-intro>
         This Content (light DOM) is showed in the host label
         thanks to the slot label.
         <p>I am a P label</p>
+    </slot-intro>
+
+
+    
+    <hr>
+    <menu-overlay>
+        <div slot="trigger">Menu</div>
+        <!-- the content below (light DOM) is hide until trigger slot is triggered -->
+        <p>title</p>
+        <button>clic</button>   
     </menu-overlay>
+
+
+
+
+    <hr>
+    <h4>Pagination</h4>
+    
+    <hr>
+    <pagination-simulator>
+
+        <p slot="click">click me!!!</p>
+        <ul>
+            <li>option1</li>
+            <li>option2</li>
+            <li>option3</li>
+        </ul>
+
+    </pagination-simulator>
+
 
 
 
