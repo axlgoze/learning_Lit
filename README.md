@@ -64,4 +64,4 @@ npm init @open-wc
 
 ### NEXT STEPS
   - Create another branch and separate courses
-  - 
+  - Separate components and import all form index.js

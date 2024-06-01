@@ -75,3 +75,9 @@ shadowRoot is the root of the component and is useful to access to the elements 
 ![bindToBoolean](../assets/bindToBoo.png)
 ### Event
 ![bindToEvent](../assets/bindToEve.png)
+
+
+## Conditionals
+![conditional](./assets_lit/conditionals.png)
+## Repeats
+![repeats](./assets_lit/repeats.png)

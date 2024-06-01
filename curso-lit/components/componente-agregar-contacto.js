@@ -6,6 +6,35 @@ export class ComponenteAgregarContacto extends LitElement {
             :host {
                 display: block;
             }
+            .agregar{
+                padding-left: 40px;
+            }
+            .agregar__titulo{
+                font-family: "Inter", sans-serif;
+                color: var(-color--titulos);
+                text-transform: uppercase;
+                font-size: 38px;
+            }
+            .form{
+                
+            }
+            .form__titulo__input{
+                font-size: 25px;
+                font-weight: normal;
+            }
+            .form__input{
+                width: 600px;
+                height: 40px;
+                font-size: 25px;
+                color: #828282;
+            }
+            input{
+                background-color: #F1F1F1;
+                box-sizing: border-box;
+                padding: 5px;
+                border: 1px solid #E0E0E0;
+                border-radius: 8px;
+            }
         `
     ];
 
