@@ -58,6 +58,24 @@ export class MenuOverlay extends LitElement {
         this.opened = false;
     }
     
+
+    get triggerTemplate(){
+        return html`
+            <div class="trigger" @click="${this.toggle}">
+                    <slot name="trigger"></slot>
+            </div>
+        `
+    }
+
+    get contentTemplate(){
+        return html`
+            <section class="${this.opened ? '' : 'closed'} over">
+                <slot></slot>
+                <button @click="${this.close}">Close</button>
+            </section>
+        `
+    }
+
     /**
       * @description returns the html template
       * @render 
@@ -65,14 +83,8 @@ export class MenuOverlay extends LitElement {
     render() {
         return html`
             
-            <div class="trigger" @click="${this.toggle}">
-                <slot name="trigger"></slot>
-            </div>
-
-            <section class="${this.opened ? '' : 'closed'} over">
-                <slot></slot>
-                <button @click="${this.close}">Close</button>
-            </section>
+            ${this.triggerTemplate}
+            ${this.contentTemplate}
 
 
             
