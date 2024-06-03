@@ -1,8 +1,9 @@
 import { LitElement, html, css } from 'lit';
+import { sharedStyles } from './shared-styles.js';
 
 export class CardBox extends LitElement {
-    static styles = [
-        css`
+    static get styles() {
+        return [sharedStyles, css`
             :host {
                 display: block;
             }
@@ -10,8 +11,10 @@ export class CardBox extends LitElement {
             div {
                 border: solid 1px red;
             }
+            
         `
-    ];
+        ];
+    }
 
     render() {
         return html`
