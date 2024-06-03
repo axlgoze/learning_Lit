@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lit en Escuela IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         body{
-            background-color: rgb(5, 5, 39);
+            background-color: rgb(22, 22, 202);
             color: white;
         }
         .pointer{
@@ -17,6 +19,13 @@
         }
         .listyled::before{
             content: "⭐";
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
         }
     </style>
 </head>
@@ -109,8 +118,6 @@
         <p>I am a P label</p>
     </slot-intro>
 
-
-    
     <hr>
     <menu-overlay>
         <div slot="trigger">Menu</div>
@@ -139,7 +146,16 @@
         </ul>
 
     </pagination-simulator> -->
+    
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aperiam minima, est, autem enim optio nemo ex voluptatem repellat dolorem quam eveniet harum labore dolorum necessitatibus commodi aut iure dolore?</p>
+    
+    <menu-overlay>
+        <span  slot="trigger" class="material-symbols-outlined">menu</span>
+        <button>Services</button>
+        <button>Contact</button> 
+        <button>About us</button>
+    </menu-overlay>
+
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo odio porro deserunt praesentium officiis reprehenderit! Rerum placeat autem excepturi doloremque optio corrupti fugiat! Fuga soluta beatae laboriosam eaque, corrupti laudantium!</p>
     <p>Hic dolorum in saepe incidunt, sequi soluta et provident ullam tenetur animi aliquam blanditiis ab quia! Sit tempore, libero aut praesentium quibusdam atque? Voluptates quam quia officiis? Ex, nesciunt tempora.</p>   
 

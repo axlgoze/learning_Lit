@@ -54,6 +54,9 @@ export class MenuOverlay extends LitElement {
     toggle(){
         this.opened= !this.opened;
     }
+    close(){
+        this.opened = false;
+    }
     
     /**
       * @description returns the html template
@@ -68,7 +71,11 @@ export class MenuOverlay extends LitElement {
 
             <section class="${this.opened ? '' : 'closed'} over">
                 <slot></slot>
+                <button @click="${this.close}">Close</button>
             </section>
+
+
+            
         `;
     }
 }
