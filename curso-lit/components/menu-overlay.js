@@ -44,6 +44,9 @@ export class MenuOverlay extends LitElement {
         super();
     
         this.opened=false;
+        document.addEventListener('click', ()=>{
+            this.opened = false;
+        })
     
     }
 
@@ -51,7 +54,8 @@ export class MenuOverlay extends LitElement {
       * @description change opened property from false to true.
       * @method 
       */
-    toggle(){
+    toggle(e){
+        e.stopPropagation();
         this.opened= !this.opened;
     }
     close(){
