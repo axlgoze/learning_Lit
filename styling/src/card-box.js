@@ -29,6 +29,8 @@ export class CardBox extends LitElement {
             <div>
                 <slot name="card"></slot>
             </div>
+
+            <slot></slot>
         `;
     }
 }
