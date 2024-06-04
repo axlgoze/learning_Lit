@@ -11,6 +11,12 @@ export class CardBox extends LitElement {
             div {
                 border: solid 1px red;
             }
+
+            h1{
+                font-size: 100px;
+                font-weight: normal;
+                color: var(--card--box-title-color);
+            }
             
         `
         ];
@@ -18,6 +24,8 @@ export class CardBox extends LitElement {
 
     render() {
         return html`
+            <h1>${this.title}</h1>
+
             <div>
                 <slot name="card"></slot>
             </div>
