@@ -27,6 +27,10 @@ export class EitSwitch extends LitElement {
         super();
     
         this.check=false;
+        this.addEventListener('click', ()=>{
+            // this.checkingImperative();
+            console.log("imperative: " + this.check)
+        });
     
     }
 
@@ -45,6 +49,9 @@ export class EitSwitch extends LitElement {
     checking(){
         this.check= !this.check;
         console.log(this.check)
+    }
+    checkingImperative(){
+        console.log("imperative: " + this.check)
     }
 
     render() {
