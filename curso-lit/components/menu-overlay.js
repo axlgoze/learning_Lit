@@ -82,6 +82,8 @@ export class MenuOverlay extends LitElement {
 
     get contentTemplate(){
         return html`
+            <eit-input @eit-input-enter="${this.toggle}"></eit-input>
+
             <section class="${this.opened ? '' : 'closed'} over">
                 <slot></slot>
                 <button @click="${this.close}">Close</button>
