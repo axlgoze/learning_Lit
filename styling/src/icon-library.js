@@ -2,12 +2,13 @@ import { LitElement, html } from 'lit-element';
 
 export class IconLibrary extends LitElement {
 
-    static get styles() { css`
-    :host {
-        display: block;
-    }
-    `;
-    }
+    static styles = [
+        css`
+            :host {
+                display: block;
+            }
+        `
+    ];
 
     
     render() {

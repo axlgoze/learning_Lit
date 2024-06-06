@@ -2,11 +2,13 @@ import { LitElement, html } from 'lit-element';
 import { icons } from './icons.js';
 export class EitIcon extends LitElement {
 
-    static styles = css`
-    :host {
-        display: block;
-    }
-    `;
+    static styles = [
+        css`
+            :host {
+                display: block;
+            }
+        `
+    ];
 
     static get properties() {
         return {

@@ -44,12 +44,20 @@ export class MenuOverlay extends LitElement {
         super();
     
         this.opened=false;
-        document.addEventListener('click', ()=>{
-            this.opened = false;
-        })
+        this.closeBind = this.close.bind(this);
     
     }
 
+    connectedCallback(){
+        // always call super
+        super.connectedCallback();
+        document.addEventListener('click', this.closeBind);
+    }
+    
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        document.removeEventListener('click', this.closeBind);
+    }
     /**
       * @description change opened property from false to true.
       * @method 
@@ -60,6 +68,7 @@ export class MenuOverlay extends LitElement {
     }
     close(){
         this.opened = false;
+        console.log("closing");
     }
     
 
