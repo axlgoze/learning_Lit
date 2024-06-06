@@ -48,11 +48,8 @@ export class EitSwitch extends LitElement {
 
     checking(){
         this.check= !this.check;
-        console.log(this.check);
         this.dispatchEvent(new CustomEvent('eit-switch-checked', {
-            detail: {
-                check: this.check
-            }
+            detail: this.check
         }));
     }
     checkingImperative(){
