@@ -161,6 +161,7 @@
 
     <hr>
     <h4>Events</h4>
+    <h3>Declaratives</h3>
     <eit-switch></eit-switch>
     <menu-overlay>
         <span slot="trigger">
@@ -176,7 +177,11 @@
     </menu-overlay>
 
     <h4>Custom Events</h4>
-    <menu-overlay></menu-overlay>
+    <!-- <eit-input @eit-input-enter="${this.toggle}"></eit-input> -->
+    <!-- <menu-overlay></menu-overlay> -->
+
+    <todo-item  task='{"name":"Answer messages", "completed":true}'></todo-item>
+    <todo-item  task='{"name":"study scrum", "completed":false}'></todo-item>
 
 
     <script type="module" src="./src/index.js"></script>

@@ -39,10 +39,10 @@ export class EitInput extends LitElement {
         let keycode = (e.keyCode ? e.keyCode : e.which);
         if(keycode == '13'){
             console.log("You've pressed enter!")
-            this.dispatchEvent(new CustomEvent('eit-input-enter'));
         }else if(keycode == '44'){
             console.log("You've pressed comma!")
         }
+        
     }
 
     render() {

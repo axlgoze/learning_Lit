@@ -13,3 +13,6 @@ import '../components/slot-intro.js'
 import '../components/menu-overlay.js'
 import '../components/pagination-simulator.js'
 import '../components/eit-switch.js'
+import '../components/todo-item.js'
+
+
