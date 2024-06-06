@@ -28,11 +28,18 @@ export class TodoItem extends LitElement {
     handlerChecked(e){
         // this.task.completed = !this.task.completed;
         // console.log("hello: " + this.task.completed);
-        this.task = {
-            name: this.task.name,
-            completed: e.detail
-        }
-        console.log("e " +e.detail)
+        // this.task = {
+        //     // name: this.task.name,
+        //     // spread operator copies all properties of the object task
+        //     ...this.task,
+        //     completed: e.detail
+        // }
+        console.log("e " +e.detail);
+
+        // re Render
+        this.task.completed = e.detail;
+        // force the reRender of component
+        this.requestUpdate();
     }
 
     render() {
