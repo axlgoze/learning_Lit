@@ -12,7 +12,10 @@ export class TestComponent extends LitElement {
     
     static get properties() {
         return {
-            object: {type: Object}
+            name: {
+                type: String,
+                attribute: 'fullname'
+            }
         };
     }
 
@@ -24,28 +27,15 @@ export class TestComponent extends LitElement {
     constructor() {
         super();
     
-        this.object = {
-            myProp: "Initial value"
-        }
+        
     
     }
     
-
-    handleClick(){
-        // this.object.myProp = "New value";
-        console.log("im in the " + this.handleClick + "method")
-
-        this.object = {
-            // ...this.object,
-            myProp : "new Value"
-        };
-    }
 
     render() {
         return html`
 
-            <h2>${this.object.myProp}</h2>
-            <button @click="${this.handleClick}">Click me!</button>
+            <h2>${this.name}</h2>
 
         `;
     }
