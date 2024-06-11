@@ -21,9 +21,9 @@ export class MyAccessors extends LitElement {
     }
 
     set prop(val){
-
+        let oldVal = this._prop;
         this._prop = Math.floor(val);
-        
+        this.requestUpdate('prop',oldVal);
     }
 
     render() {
