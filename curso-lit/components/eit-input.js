@@ -16,21 +16,35 @@ export class EitInput extends LitElement {
         `;
     }
 
-    static properties = {
-        
-            
-            placeholder: {type: String},
-            disabled: {type: Boolean},
-            value: {type: String},
-            label: {type: String}
-        
+    static  get properties() {
+            // Properties
+            return{
+                placeholder: {
+                    type: String,
+                    attribute: 'ph'
+                },
+                disabled: {type: Boolean},
+                label: {type: String},
+                value: {
+                    // type: String,
+                    reflect: true,
+                    converter: {
+                        toAttribute(value){
+                            return value.toLowerCase();
+                        },
+                        fromAttribute(value){
+                            return value.toUpperCase();
+                        }
+                    }
+                }
+            };
     }
 
     constructor() {
         super();
             // initializing
             this.disabled=false;
-            this.value="";
+            this.value='';
             this.placeholder='';
     
     }

@@ -15,5 +15,6 @@ import '../components/pagination-simulator.js'
 import '../components/eit-switch.js'
 import '../components/todo-item.js'
 import '../components/test-component'
+import '../components/my-accessors.js'
 
 

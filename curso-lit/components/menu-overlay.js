@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import './eit-input';
 
 export class MenuOverlay extends LitElement {
     static styles = [
