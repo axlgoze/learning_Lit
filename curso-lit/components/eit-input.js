@@ -73,5 +73,11 @@ export class EitInput extends LitElement {
             </div>
             `;
     }
+
+    attributeChangedCallback(nameAttr, oldValue, newValue){
+        super.attributeChangedCallback(nameAttr, oldValue, newValue)
+            console.log("attribute: "+ nameAttr + " OLD: " + oldValue + " NEW: "+ newValue);
+            
+    }
 }
 customElements.define('eit-input', EitInput);

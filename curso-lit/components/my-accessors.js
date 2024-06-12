@@ -16,13 +16,14 @@ export class MyAccessors extends LitElement {
     }
     // transformation
     get prop(){
-        // underscore is a convetion to declare private props
+        // underscore is a convention to declare private props
         return this._prop *3;
     }
 
     set prop(val){
         let oldVal = this._prop;
         this._prop = Math.floor(val);
+        // When a change occurs we need to notify this change in the property with:
         this.requestUpdate('prop',oldVal);
     }
 
