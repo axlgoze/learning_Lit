@@ -69,7 +69,7 @@ export class MenuOverlay extends LitElement {
     }
     close(){
         this.opened = false;
-        console.log("closing");
+        // console.log("closing");
     }
     
 

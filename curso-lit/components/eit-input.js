@@ -29,11 +29,11 @@ export class EitInput extends LitElement {
                     // type: String,
                     reflect: true,
                     converter: {
-                        toAttribute(value){
-                            return value.toLowerCase();
+                        toAttribute(value) {
+                            return value.toString().toLowerCase();
                         },
                         fromAttribute(value){
-                            return value.toUpperCase();
+                            return value.toString().toUpperCase();
                         }
                     }
                 }
@@ -52,11 +52,17 @@ export class EitInput extends LitElement {
     _lookForKey(e){
         let keycode = (e.keyCode ? e.keyCode : e.which);
         if(keycode == '13'){
-            console.log("You've pressed enter!")
+            console.log("You've pressed enter!");
+            console.log(typeof(this.value));
         }else if(keycode == '44'){
             console.log("You've pressed comma!")
         }
         
+    }
+
+    inputChanged(e){
+        this.value = e.target.value;
+        console.log("inputChanged "+this.shadowRoot.getElementById("textField").value);
     }
 
     render() {
@@ -75,7 +81,7 @@ export class EitInput extends LitElement {
     }
 
     attributeChangedCallback(nameAttr, oldValue, newValue){
-        super.attributeChangedCallback(nameAttr, oldValue, newValue)
+        super.attributeChangedCallback(nameAttr, oldValue, newValue);
             console.log("attribute: "+ nameAttr + " OLD: " + oldValue + " NEW: "+ newValue);
             
     }
