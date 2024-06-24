@@ -65,6 +65,12 @@ export class EitInput extends LitElement {
         console.log("inputChanged "+this.shadowRoot.getElementById("textField").value);
     }
 
+    // This method is called for the first time after render acts.
+    firstUpdated(){
+        // the text input with textField ID is focused.
+        this.shadowRoot.getElementById('textField').focus();
+    }
+
     render() {
         return html`
             <div>

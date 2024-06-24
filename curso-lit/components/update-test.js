@@ -31,15 +31,27 @@ export class UpdateTest extends LitElement {
     this.name=""
     }
 
+    firstUpdated(){
+        // Js admits variables created in runtime
+        this.elinput = this.shadowRoot.getElementById('theInput');
+    }
+
+    get elInput(){
+        return this.elinput = this.shadowRoot.getElementById('theInput');
+    }
+
+
     nameChange(){
         this.name= Math.random();
         // console.log(typeof(this.name));
         // updateComplete is a promise which is resolved when the component is Re rendered
         this.updateComplete.then( ()=>{
-            console.log("newData: ",this.shadowRoot.getElementById("theInput").value);
+            // with this option we can omit write all the shadowRoot sentence
+            console.log("newData: ", this.elInput.value);
         })
     }
 
+    
     render() {
         // .value is bind to name prop
         return html`
