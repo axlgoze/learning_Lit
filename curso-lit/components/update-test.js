@@ -15,7 +15,14 @@ export class UpdateTest extends LitElement {
     static get properties() {
         return {
             name:{
-                type: String
+                type: String,
+                hasChanged(newVal, oldVal){
+                    if (newVal > oldVal){
+                        console.log('hasChanged', newVal, oldVal)
+                        return true;
+                    }
+                    return false;
+                }
             }
         };
     }
