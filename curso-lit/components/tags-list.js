@@ -18,8 +18,27 @@ export class TagsList extends LitElement {
     constructor() {
         super();
     
-        this.tags=[]
+        this.tags=[];
+        // we can create methods in constructor
+        this.addEventListener('click', (e) => 
+            this.addRandomTag()
+        )
+
+        // this.addEventListener('click', (e) => {
+        //     return addRandomTag();
+        // })
     
+    }
+
+    // adds a random number to the array
+    addRandomTag(){
+        // generates a random number between 0 - 1000 being assigned to randomNumber variable.
+        let randomNumber = Math.floor(Math.random()*1000);
+        this.tags.push(randomNumber);
+        console.log(this.tags);
+        // This method is called to reRender the component. In this component a random number will be shown.
+        this.requestUpdate();
+        
     }
 
     render() {
