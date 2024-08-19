@@ -46,3 +46,8 @@ add to scripts:
 ```
 npm run build
 ```
+
+
+# How to add new components ?
+
+into the index.html file we call components using the index.js file which will call the components stored in the components directory. once did it you can use your new component.

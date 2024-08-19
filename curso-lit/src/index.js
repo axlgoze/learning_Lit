@@ -18,5 +18,6 @@ import '../components/test-component'
 import '../components/my-accessors.js'
 import '../components/update-test.js'
 import '../components/message-changer.js'
+import '../components/cells-exam.js'
 
 
